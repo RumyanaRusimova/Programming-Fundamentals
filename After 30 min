@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Globalization;
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var h = int.Parse(Console.ReadLine());
+
+            var m = int.Parse(Console.ReadLine());
+            var totalM = h * 60 + m;
+            var add = totalM + 30;
+
+            TimeSpan result = TimeSpan.FromMinutes(add);
+            var resultAsString = result.ToString(@"h\:mm");
+            
+            Console.WriteLine(resultAsString);
+
+
+        }
+
+    }
+}
