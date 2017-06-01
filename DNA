@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DNA
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num = int.Parse(Console.ReadLine());
+            string[] letters = { "A", "C", "G", "T" };
+            var sum = 0;
+
+            int counter = 0;
+            for (int i = 0; i < letters.Length ; i++)
+            {
+                for (int j = 0; j < letters.Length; j++)
+                {
+                    for (int k = 0; k < letters.Length; k++)
+                    {                    
+                        sum = i + j + k + 3;
+                        if( sum >= num)
+                        {
+                            Console.Write("O"+ letters[i]+letters[j]+letters[k]+"O ");
+                        }
+                        else
+                        {
+                            Console.Write("X"+letters[i]+ letters[j]+ letters[k]+ "X ");
+                        }
+                        ++counter;
+                        if (counter % 4 == 0)
+                        {
+                            Console.WriteLine();
+                        }
+                   }                           
+
+                }
+                
+            }
+        }
+    }
+}
