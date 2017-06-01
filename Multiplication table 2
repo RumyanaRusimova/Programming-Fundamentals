@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Multiplication_Table_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //  var a = int.Parse(Console.ReadLine());
+            //   var b = int.Parse(Console.ReadLine());
+            // var product = 1;
+            //  for (int i = b; i <= 10; i++)
+            //  {
+            //    product = a * i;
+            //    Console.WriteLine("{0} X {1} = {2}", a, i, product);
+            //    }
+            //    }
+            // }
+            var num = int.Parse(Console.ReadLine());
+            var times = int.Parse(Console.ReadLine());
+            do
+            {
+                Console.WriteLine($"{num} X {times} = {num * times}");
+                times++;
+            } while (times <= 10);
+        }
+    }
+}
+
+
+    
+
